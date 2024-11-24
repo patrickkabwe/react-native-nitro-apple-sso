@@ -5,8 +5,8 @@ A Simple React Native Nitro module for in-app browser.
 [![Build Android](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/android-build.yml/badge.svg)](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/android-build.yml)
 [![Build iOS](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/ios-build.yml/badge.svg)](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/ios-build.yml)
 
-[![npm version](https://img.shields.io/npm/v/react-native-apple-auth.svg?style=flat-square)](https://www.npmjs.com/package/react-native-apple-auth)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-apple-auth.svg?style=flat-square)](https://www.npmjs.com/package/react-native-apple-auth)
+[![npm version](https://img.shields.io/npm/v/@kazion/react-native-apple-auth.svg?style=flat-square)](https://www.npmjs.com/package/@kazion/react-native-apple-auth)
+[![npm downloads](https://img.shields.io/npm/dm/@kazion/react-native-apple-auth.svg?style=flat-square)](https://www.npmjs.com/package/@kazion/react-native-apple-auth)
 
 > [!WARNING]  
 > This library is still under development. Use at your own risk.
@@ -17,7 +17,7 @@ A Simple React Native Nitro module for in-app browser.
 - [Nitro Modules](https://github.com/mrousavy/nitro)
 
 ```sh
-bun install react-native-apple-auth react-native-nitro-modules
+bun install @kazion/react-native-apple-auth react-native-nitro-modules
 cd ios && pod install && cd ..
 ```
 

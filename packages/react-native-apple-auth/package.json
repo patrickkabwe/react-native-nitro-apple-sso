@@ -1,5 +1,5 @@
 {
-  "name": "react-native-apple-auth",
+  "name": "@kazion/react-native-apple-auth",
   "version": "0.1.0",
   "description": "A React Native Nitro module for in-app browser",
   "main": "./lib/commonjs/index.js",
@@ -48,7 +48,8 @@
   },
   "homepage": "https://github.com/patrickkabwe/react-native-nitro-in-app-browser#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@react-native/eslint-config": "^0.76.2",
