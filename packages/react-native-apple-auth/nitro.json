@@ -1,0 +1,17 @@
+{
+  "cxxNamespace": ["appleauth"],
+  "ios": {
+    "iosModuleName": "AppleAuth"
+  },
+  "android": {
+    "androidNamespace": ["appleauth"],
+    "androidCxxLibName": "AppleAuth"
+  },
+  "autolinking": {
+    "AppleAuth": {
+      "swift": "HybridAppleAuth",
+      "kotlin": "HybridAppleAuth"
+    }
+  },
+  "ignorePaths": ["node_modules"]
+}
