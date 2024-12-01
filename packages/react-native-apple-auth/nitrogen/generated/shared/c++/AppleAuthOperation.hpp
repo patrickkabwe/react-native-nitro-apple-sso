@@ -27,6 +27,7 @@ namespace margelo::nitro::appleauth {
   enum class AppleAuthOperation {
     LOGIN      SWIFT_NAME(login) = 0,
     LOGOUT      SWIFT_NAME(logout) = 1,
+    IMPLICIT      SWIFT_NAME(implicit) = 2,
   } CLOSED_ENUM;
 
 } // namespace margelo::nitro::appleauth
@@ -57,7 +58,7 @@ namespace margelo::nitro {
         return false;
       }
       // Check if we are within the bounds of the enum.
-      return integer >= 0 && integer <= 1;
+      return integer >= 0 && integer <= 2;
     }
   };
 

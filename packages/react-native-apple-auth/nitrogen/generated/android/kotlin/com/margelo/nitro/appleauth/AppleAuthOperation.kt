@@ -17,5 +17,10 @@ import com.facebook.proguard.annotations.DoNotStrip
 @Keep
 enum class AppleAuthOperation {
   LOGIN,
-  LOGOUT
+  LOGOUT,
+  IMPLICIT;
+
+  @DoNotStrip
+  @Keep
+  private val _ordinal = ordinal
 }

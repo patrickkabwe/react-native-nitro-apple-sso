@@ -4,7 +4,6 @@ import AuthenticationServices
 import React
 
 
-
 class HybridAppleAuth : NSObject, HybridAppleAuthSpec  {
     private var authContinuation: CheckedContinuation<AppleAuthCredential?, Error>?
     
@@ -66,7 +65,7 @@ extension HybridAppleAuth : ASAuthorizationControllerDelegate {
         print("Error domain: \(error._domain)")
         print("Error code: \(error._code)")
         // ALWAYS returns std:exeception
-        self.authContinuation?.resume(throwing: AppleAuthError.userCancelledRequest)
+        self.authContinuation?.resume(throwing:error)
         self.authContinuation = nil
     }
 }
@@ -100,7 +99,7 @@ extension HybridAppleAuth {
         switch requestOption {
         case .login: return .operationLogin
         case .logout: return .operationLogout
-        default: return .operationLogin
+        default: return .operationImplicit
         }
     }
 }

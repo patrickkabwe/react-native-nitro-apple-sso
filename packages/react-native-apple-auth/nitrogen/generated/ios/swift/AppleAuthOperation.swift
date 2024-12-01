@@ -21,6 +21,8 @@ public extension AppleAuthOperation {
         self = .login
       case "LOGOUT":
         self = .logout
+      case "IMPLICIT":
+        self = .implicit
       default:
         return nil
     }
@@ -35,6 +37,8 @@ public extension AppleAuthOperation {
         return "LOGIN"
       case .logout:
         return "LOGOUT"
+      case .implicit:
+        return "IMPLICIT"
     }
   }
 }

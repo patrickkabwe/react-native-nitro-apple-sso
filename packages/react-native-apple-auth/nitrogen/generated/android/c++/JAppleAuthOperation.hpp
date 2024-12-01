@@ -28,7 +28,7 @@ namespace margelo::nitro::appleauth {
     [[maybe_unused]]
     AppleAuthOperation toCpp() const {
       static const auto clazz = javaClassStatic();
-      static const auto fieldOrdinal = clazz->getField<int>("ordinal");
+      static const auto fieldOrdinal = clazz->getField<int>("_ordinal");
       int ordinal = this->getFieldValue(fieldOrdinal);
       return static_cast<AppleAuthOperation>(ordinal);
     }
@@ -42,12 +42,15 @@ namespace margelo::nitro::appleauth {
       static const auto clazz = javaClassStatic();
       static const auto fieldLOGIN = clazz->getStaticField<JAppleAuthOperation>("LOGIN");
       static const auto fieldLOGOUT = clazz->getStaticField<JAppleAuthOperation>("LOGOUT");
+      static const auto fieldIMPLICIT = clazz->getStaticField<JAppleAuthOperation>("IMPLICIT");
       
       switch (value) {
         case AppleAuthOperation::LOGIN:
           return clazz->getStaticFieldValue(fieldLOGIN);
         case AppleAuthOperation::LOGOUT:
           return clazz->getStaticFieldValue(fieldLOGOUT);
+        case AppleAuthOperation::IMPLICIT:
+          return clazz->getStaticFieldValue(fieldIMPLICIT);
         default:
           std::string stringValue = std::to_string(static_cast<int>(value));
           throw std::invalid_argument("Invalid enum value (" + stringValue + "!");
