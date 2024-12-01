@@ -8,6 +8,7 @@ export enum AppleAuthScopes {
 export enum AppleAuthOperation {
   LOGIN,
   LOGOUT,
+  IMPLICIT
 }
 
 export enum RealUserStatus {

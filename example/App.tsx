@@ -1,20 +1,19 @@
-import {useState} from 'react';
-import {Button, SafeAreaView, Text} from 'react-native';
 import {
   AppleAuthCredential,
-  AppleAuthOperation,
   AppleAuthScopes,
   RNAppleAuth,
-} from 'react-native-apple-auth';
+} from '@kazion/react-native-apple-auth';
+import {useState} from 'react';
+import {Button, SafeAreaView, Text} from 'react-native';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
   const [creds, setCreds] = useState<AppleAuthCredential | null>(null);
+
   const handleAppleSignin = async () => {
     setLoading(true);
     try {
       const appleAuthCredential = await RNAppleAuth.signIn({
-        operation: AppleAuthOperation.LOGIN,
         scopes: [AppleAuthScopes.EMAIL, AppleAuthScopes.FULL_NAME],
       });
 
