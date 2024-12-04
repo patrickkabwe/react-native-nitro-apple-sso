@@ -11,7 +11,7 @@
     "release": "release-it",
     "clean:packages": "rm -rf packages/react-native-apple-auth/tsconfig.tsbuildinfo packages/react-native-apple-auth/node_modules packages/react-native-apple-auth/lib",
     "clean": "bun --cwd packages/react-native-apple-auth clean && bun clean:packages",
-    "spec": "cd packages/react-native-apple-auth && bun specs && cd .."
+    "spec": "cd packages/react-native-apple-auth && bun codegen && cd .."
   },
   "workspaces": [
     "packages/react-native-apple-auth",
