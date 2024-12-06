@@ -1,6 +1,6 @@
 {
   "name": "@kazion/react-native-apple-auth",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A React Native Nitro module for in-app browser",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
@@ -39,14 +39,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patrickkabwe/react-native-nitro-in-app-browser.git"
+    "url": "git+https://github.com/patrickkabwe/react-native-apple-auth.git"
   },
   "author": "Patrick Kabwe <me@patrickkabwe.com> (https://github.com/patrickkabwe)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/patrickkabwe/react-native-nitro-in-app-browser/issues"
+    "url": "https://github.com/patrickkabwe/react-native-apple-auth/issues"
   },
-  "homepage": "https://github.com/patrickkabwe/react-native-nitro-in-app-browser#readme",
+  "homepage": "https://github.com/patrickkabwe/react-native-apple-auth#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
