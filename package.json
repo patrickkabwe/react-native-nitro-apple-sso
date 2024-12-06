@@ -18,6 +18,9 @@
     "example"
   ],
   "devDependencies": {
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.4.1",
     "@release-it/conventional-changelog": "^8.0.1",
     "@release-it/bumper": "^6.0.1",
     "@jamesacarr/eslint-formatter-github-actions": "^0.2.0",
@@ -64,11 +67,5 @@
         }
       }
     }
-  },
-  "dependencies": {
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.4.1",
-    "react-native-nitro-modules": "^0.18.0"
   }
 }
