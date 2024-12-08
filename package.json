@@ -1,20 +1,16 @@
 {
   "name": "@kazion/react-native-apple-auth",
-  "packageManager": "bun@1.1.31",
   "private": true,
   "version": "0.2.1",
   "repository": "https://github.com/patrickkabwe/react-native-apple-auth.git",
-  "author": "Patrick Kabwe <me@patrickkabwe.com> (https://github.com/patrickkabwe)",
+  "author": "Patrick Kabwe",
   "scripts": {
     "bootstrap": "bun --filter=\"**\" install && bun tsc && bun --filter=\"example\" pods",
     "typescript": "bun --filter=\"**\" typescript",
-    "release": "release-it",
-    "clean:packages": "rm -rf packages/react-native-apple-auth/tsconfig.tsbuildinfo packages/react-native-apple-auth/node_modules packages/react-native-apple-auth/lib",
-    "clean": "bun --cwd packages/react-native-apple-auth clean && bun clean:packages",
-    "spec": "cd packages/react-native-apple-auth && bun specs && cd .."
+    "release": "release-it"
   },
   "workspaces": [
-    "packages/react-native-apple-auth",
+    "react-native-apple-auth",
     "example"
   ],
   "devDependencies": {

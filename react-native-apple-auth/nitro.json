@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/patrickkabwe/create-nitro-module/refs/heads/main/assets/nitro-schema.json",
+  "cxxNamespace": [
+    "appleauth"
+  ],
+  "ios": {
+    "iosModuleName": "AppleAuth"
+  },
+  "android": {
+    "androidNamespace": [
+      "appleauth"
+    ],
+    "androidCxxLibName": "AppleAuth"
+  },
+  "autolinking": {
+    "AppleAuth": {
+      "swift": "AppleAuth",
+      "kotlin": "AppleAuth"
+    }
+  },
+  "ignorePaths": [
+    "node_modules"
+  ]
+}

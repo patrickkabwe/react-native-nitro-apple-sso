@@ -1,5 +1,5 @@
-const path = require('path');
-const pkg = require('../packages/react-native-apple-auth/package.json');
+const path = require('path')
+const pkg = require('../react-native-apple-auth/package.json')
 
 /**
  * @type {import('@react-native-community/cli-types').Config}
@@ -7,7 +7,7 @@ const pkg = require('../packages/react-native-apple-auth/package.json');
 module.exports = {
   dependencies: {
     [pkg.name]: {
-      root: path.join(__dirname, '..', 'packages', 'react-native-apple-auth'),
+      root: path.join(__dirname, '..', 'react-native-apple-auth'),
     },
   },
-};
+}
