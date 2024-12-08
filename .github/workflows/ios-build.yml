@@ -5,31 +5,33 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/ios-build.yml'
-      - 'example/ios/**'
-      - '**/nitrogen/generated/shared/**'
-      - '**/nitrogen/generated/ios/**'
-      - 'packages/react-native-apple-auth/cpp/**'
-      - 'packages/react-native-apple-auth/ios/**'
-      - '**/Podfile.lock'
-      - '**/*.podspec'
-      - '**/react-native.config.js'
-      - '**/nitro.json'
+      - ".github/workflows/ios-build.yml"
+      - "example/ios/**"
+      - "**/nitrogen/generated/shared/**"
+      - "**/nitrogen/generated/ios/**"
+      - "react-native-apple-auth/cpp/**"
+      - "react-native-apple-auth/ios/**"
+      - "**/Podfile.lock"
+      - "**/*.podspec"
+      - "**/react-native.config.js"
+      - "**/nitro.json"
   pull_request:
     paths:
-      - '.github/workflows/ios-build.yml'
-      - 'example/ios/**'
-      - '**/nitrogen/generated/shared/**'
-      - '**/nitrogen/generated/ios/**'
-      - 'packages/react-native-apple-auth/cpp/**'
-      - 'packages/react-native-apple-auth/ios/**'
-      - '**/Podfile.lock'
-      - '**/*.podspec'
-      - '**/react-native.config.js'
-      - '**/nitro.json'
+      - ".github/workflows/ios-build.yml"
+      - "example/ios/**"
+      - "**/nitrogen/generated/shared/**"
+      - "**/nitrogen/generated/ios/**"
+      - "react-native-apple-auth/cpp/**"
+      - "react-native-apple-auth/ios/**"
+      - "**/Podfile.lock"
+      - "**/*.podspec"
+      - "**/react-native.config.js"
+      - "**/nitro.json"
 
 env:
   USE_CCACHE: 1
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   build_new:
