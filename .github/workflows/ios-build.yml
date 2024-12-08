@@ -70,8 +70,8 @@ jobs:
         run: "set -o pipefail && xcodebuild \
           CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ \
           -derivedDataPath build -UseModernBuildSystem=YES \
-          -workspace AppleAuthExample.xcworkspace \
-          -scheme AppleAuthExample \
+          -workspace NitroExample.xcworkspace \
+          -scheme NitroExample \
           -sdk iphonesimulator \
           -configuration Debug \
           -destination 'platform=iOS Simulator,name=iPhone 16' \
@@ -120,8 +120,8 @@ jobs:
         run: "set -o pipefail && xcodebuild \
           CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ \
           -derivedDataPath build -UseModernBuildSystem=YES \
-          -workspace AppleAuthExample.xcworkspace \
-          -scheme AppleAuthExample \
+          -workspace NitroExample.xcworkspace \
+          -scheme NitroExample \
           -sdk iphonesimulator \
           -configuration Debug \
           -destination 'platform=iOS Simulator,name=iPhone 16' \
