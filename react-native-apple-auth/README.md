@@ -13,22 +13,26 @@ A React Native library for Apple Sign In and Passkey authentication, built with 
 ## Features
 
 ### ✨ Seamless iOS Integration
+
 - Native Apple Sign In implementation
 - Smooth user experience with iOS design guidelines
 - Optimized performance using native modules
 
 ### 🔧 Built with Modern Architecture
+
 - Powered by [Nitro modules](https://github.com/mrousavy/nitro) for superior performance
 - Zero runtime overhead with direct swift c++ native bindings
 - Type-safe API with full TypeScript support
 
 ### 🎯 Developer Experience
+
 - Simple, promise-based API
 - Improved application state integration
 - Comprehensive TypeScript definitions
 - Detailed error handling
 
 ### 🚀 Coming Soon
+
 - 🚧 Android Support
 - 🚧 Web Support
 - 🚧 Passkey Authentication
@@ -142,7 +146,7 @@ MIT
 
 ---
 
-Created with ❤️ by [Patrick Kabwe](https://github.com/patrickkabwe)
+Created with [Create Nitro Modules](https://github.com/patrickkabwe/create-nitro-module)
 
 ## Acknowledgments
 
