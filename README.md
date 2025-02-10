@@ -9,7 +9,6 @@ A React Native module for Apple Sign In Built with Nitro Modules.
 
 ## Features
 
-### ✨ Seamless iOS Integration
 - Native Apple Sign In implementation
 - Smooth user experience with iOS design guidelines
 - Optimized performance using native modules
@@ -22,6 +21,7 @@ A React Native module for Apple Sign In Built with Nitro Modules.
 ## Installation
 
 ```bash
+# Install the module
 bun add @kazion/react-native-apple-auth react-native-nitro-modules
 
 # Install iOS dependencies
