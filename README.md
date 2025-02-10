@@ -1,14 +1,11 @@
-# react-native-apple-auth
+# @kazion/react-native-apple-auth
 
-A React Native library for Apple Sign In and Passkey authentication, built with Nitro Modules.
+A React Native module for Apple Sign In Built with Nitro Modules.
 
 [![Build Android](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/android-build.yml/badge.svg)](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/android-build.yml)
 [![Build iOS](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/ios-build.yml/badge.svg)](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/ios-build.yml)
 [![npm version](https://img.shields.io/npm/v/@kazion/react-native-apple-auth.svg?style=flat-square)](https://www.npmjs.com/package/@kazion/react-native-apple-auth)
 [![npm downloads](https://img.shields.io/npm/dm/@kazion/react-native-apple-auth.svg?style=flat-square)](https://www.npmjs.com/package/@kazion/react-native-apple-auth)
-
-> **Warning**
-> This library is currently in beta. Use in production with caution.
 
 ## Features
 
@@ -17,38 +14,15 @@ A React Native library for Apple Sign In and Passkey authentication, built with 
 - Smooth user experience with iOS design guidelines
 - Optimized performance using native modules
 
-### 🔧 Built with Modern Architecture
-- Powered by [Nitro modules](https://github.com/mrousavy/nitro) for superior performance
-- Zero runtime overhead with direct swift c++ native bindings
-- Type-safe API with full TypeScript support
-
-### 🎯 Developer Experience
-- Simple, promise-based API
-- Improved application state integration
-- Comprehensive TypeScript definitions
-- Detailed error handling
-
-### 🚀 Coming Soon
-- 🚧 Android Support
-- 🚧 Web Support
-- 🚧 Passkey Authentication
-
 ## Requirements
 
-- React Native ≥ 0.76
-- [Nitro Modules](https://github.com/mrousavy/nitro)
+- React Native v0.76.0 or higher
+- Node 18.0.0 or higher
 
 ## Installation
 
-```sh
-# Using bun
-bun install @kazion/react-native-apple-auth react-native-nitro-modules
-
-# Using npm
-npm install @kazion/react-native-apple-auth react-native-nitro-modules
-
-# Using yarn
-yarn add @kazion/react-native-apple-auth react-native-nitro-modules
+```bash
+bun add @kazion/react-native-apple-auth react-native-nitro-modules
 
 # Install iOS dependencies
 cd ios && pod install && cd ..
@@ -104,46 +78,15 @@ const App = () => {
 export default App
 ```
 
-## API Reference
+## Credits
 
-### RNAppleAuth.signIn(options)
+Bootstrapped with [create-nitro-module](https://github.com/patrickkabwe/create-nitro-module).
 
-Initiates the Apple Sign In flow.
-
-#### Options
-
-| Parameter | Type              | Description                                  |
-| --------- | ----------------- | -------------------------------------------- |
-| scopes    | AppleAuthScopes[] | Array of requested scopes (EMAIL, FULL_NAME) |
-
-#### Returns
-
-Returns a Promise that resolves to `AppleAuthCredential`:
-
-```typescript
-interface AppleAuthCredential {
-  email?: string
-  fullName?: string
-  // Additional fields to be documented
-}
-```
 
 ## Contributing
 
-Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
-
-- Setting up your development environment
-- Submitting pull requests
-- Our code of conduct
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
 MIT
-
----
-
-Created with ❤️ by [Patrick Kabwe](https://github.com/patrickkabwe)
-
-## Acknowledgments
-
-This package is built on top of [react-native-nitro-modules](https://github.com/mrousavy/nitro).

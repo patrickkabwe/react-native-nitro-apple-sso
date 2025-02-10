@@ -1,34 +1,76 @@
 {
   "name": "@kazion/react-native-apple-auth",
-  "packageManager": "bun@1.1.31",
-  "private": true,
   "version": "0.2.1",
-  "repository": "https://github.com/patrickkabwe/react-native-apple-auth.git",
-  "author": "Patrick Kabwe <me@patrickkabwe.com> (https://github.com/patrickkabwe)",
+  "description": "Nitro module package",
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/module/index.js",
+  "types": "./lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
   "scripts": {
-    "bootstrap": "bun --filter=\"**\" install && bun tsc && bun --filter=\"example\" pods",
-    "typescript": "bun --filter=\"**\" typescript",
+    "build": "rm -rf lib && bun typecheck && bob build",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf android/build node_modules/**/android/build lib android/.cxx node_modules/**/android/.cxx",
     "release": "release-it",
-    "clean:packages": "rm -rf packages/react-native-apple-auth/tsconfig.tsbuildinfo packages/react-native-apple-auth/node_modules packages/react-native-apple-auth/lib",
-    "clean": "bun --cwd packages/react-native-apple-auth clean && bun clean:packages",
-    "spec": "cd packages/react-native-apple-auth && bun specs && cd .."
+    "codegen": "bun typecheck && nitro-codegen --logLevel=\"debug\" && bun run build && node post-script.js"
   },
+  "keywords": [
+    "react-native-apple-auth",
+    "react-native"
+  ],
+  "files": [
+    "src",
+    "react-native.config.js",
+    "lib",
+    "nitrogen",
+    "cpp",
+    "android/build.gradle",
+    "android/gradle.properties",
+    "android/CMakeLists.txt",
+    "android/src",
+    "ios/**/*.h",
+    "ios/**/*.m",
+    "ios/**/*.mm",
+    "ios/**/*.cpp",
+    "ios/**/*.swift",
+    "app.plugin.js",
+    "*.podspec",
+    "README.md"
+  ],
   "workspaces": [
-    "packages/react-native-apple-auth",
     "example"
   ],
+  "repository": "https://github.com/patrickkabwe/react-native-apple-auth.git",
+  "author": "Patrick Kabwe",
+  "license": "MIT",
+  "bugs": "https://github.com/patrickkabwe/react-native-apple-auth/issues",
+  "homepage": "https://github.com/patrickkabwe/react-native-apple-auth#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true
+  },
   "devDependencies": {
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.4.1",
-    "@release-it/conventional-changelog": "^8.0.1",
-    "@release-it/bumper": "^6.0.1",
-    "@jamesacarr/eslint-formatter-github-actions": "^0.2.0",
-    "release-it": "^17.6.0"
+    "react": "^18.3.1",
+    "react-native": "^0.77.0",
+    "nitro-codegen": "^0.22.1",
+    "react-native-nitro-modules": "^0.22.1",
+    "react-native-builder-bob": "^0.35.2",
+    "release-it": "^18.1.2",
+    "@release-it/bumper": "^7.0.1",
+    "@release-it/conventional-changelog": "^10.0.0",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.3.4",
+    "typescript": "5.0.4",
+    "@jamesacarr/eslint-formatter-github-actions": "^0.2.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-nitro-modules": "*"
   },
   "release-it": {
     "npm": {
-      "publish": false
+      "publish": true
     },
     "git": {
       "commitMessage": "chore: release ${version}",
@@ -38,7 +80,15 @@
     "github": {
       "release": true
     },
+    "hooks": {
+      "before:init": "bun typecheck",
+      "after:bump": "bun run build"
+    },
     "plugins": {
+      "@release-it/bumper": {
+        "in": ["package.json", "example/package.json"],
+        "out": ["package.json", "example/package.json"]
+      },
       "@release-it/conventional-changelog": {
         "preset": {
           "name": "conventionalcommits",
@@ -64,8 +114,57 @@
               "section": "📚 Documentation"
             }
           ]
-        }
+        },
+        "infile": "CHANGELOG.md"
       }
     }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@react-native",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "warn",
+        {
+          "quoteProps": "consistent",
+          "singleQuote": true,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "useTabs": false
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "semi": false
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.json"
+        }
+      ]
+    ]
   }
 }
