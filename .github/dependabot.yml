@@ -1,44 +1,52 @@
 version: 2
-
+enable-beta-ecosystems: true
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "daily"
+      interval: 'daily'
     labels:
-      - "dependencies"
+      - 'dependencies'
 
-  - package-ecosystem: "gradle"
+  - package-ecosystem: 'gradle'
     directories:
-      - "/packages/react-native-apple-auth/android/"
-      - "/example/android/"
+      - '/android/'
+      - '/example/android/'
     schedule:
-      interval: "daily"
+      interval: 'daily'
     labels:
-      - "nitro-core"
-      - "nitrogen"
-      - "dependencies"
-      - "kotlin"
+      - 'nitro-core'
+      - 'nitrogen'
+      - 'dependencies'
+      - 'kotlin'
 
-  - package-ecosystem: "npm"
-    directories:
-      - "/packages/react-native-apple-auth/"
-      - "/example/"
+  - package-ecosystem: 'bundler'
+    directory: '/example/'
     schedule:
-      interval: "daily"
+      interval: 'daily'
     labels:
-      - "nitro-core"
-      - "dependencies"
-      - "typescript"
-      - "nitrogen"
+      - 'dependencies'
+      - 'ruby'
+
+  - package-ecosystem: 'npm'
+    directories:
+      - '/example/'
+      - '/'
+    schedule:
+      interval: 'daily'
+    labels:
+      - 'nitro-core'
+      - 'dependencies'
+      - 'typescript'
+      - 'nitrogen'
 
     groups:
-      rncli:
+      react-native-cli:
         patterns:
-          - "@react-native-community/cli*"
+          - '@react-native-community/cli*'
       babel:
         patterns:
-          - "@babel/*"
-      rn:
+          - '@babel/*'
+      react-native:
         patterns:
-          - "@react-native/*"
+          - '@react-native/*'
