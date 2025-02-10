@@ -1,6 +1,6 @@
 {
   "name": "@kazion/react-native-apple-auth",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Nitro module package",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
@@ -85,7 +85,10 @@
       "after:bump": "bun run build"
     },
     "plugins": {
-      "@release-it/bumper": {},
+      "@release-it/bumper": {
+        "in": ["package.json", "example/package.json"],
+        "out": ["package.json", "example/package.json"]
+      },
       "@release-it/conventional-changelog": {
         "preset": {
           "name": "conventionalcommits",
