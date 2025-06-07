@@ -16,7 +16,14 @@
   },
   "keywords": [
     "react-native-apple-auth",
-    "react-native"
+    "react-native",
+    "apple-auth",
+    "apple-sign-in",
+    "apple-login",
+    "apple-authentication",
+    "apple-signin",
+    "apple-sign-in-with-apple",
+    "apple-sign-in-with-apple-auth"
   ],
   "files": [
     "src",
