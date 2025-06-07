@@ -41,6 +41,7 @@ namespace margelo::nitro::appleauth {
     std::optional<std::string> nonce     SWIFT_PRIVATE;
 
   public:
+    AppleAuthOptions() = default;
     explicit AppleAuthOptions(std::optional<AppleAuthOperation> operation, std::vector<AppleAuthScopes> scopes, std::optional<std::string> nonce): operation(operation), scopes(scopes), nonce(nonce) {}
   };
 

@@ -38,6 +38,7 @@ namespace margelo::nitro::appleauth {
     std::optional<std::string> state     SWIFT_PRIVATE;
 
   public:
+    AppleAuthCredential() = default;
     explicit AppleAuthCredential(std::string user, std::optional<std::string> email, std::optional<std::string> fullName, std::optional<std::string> authorizationCode, std::optional<std::string> identityToken, std::optional<std::string> state): user(user), email(email), fullName(fullName), authorizationCode(authorizationCode), identityToken(identityToken), state(state) {}
   };
 
