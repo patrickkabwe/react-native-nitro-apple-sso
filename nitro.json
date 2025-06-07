@@ -20,5 +20,6 @@
   },
   "ignorePaths": [
     "**/node_modules"
-  ]
+  ],
+  "gitAttributesGeneratedFlag": true
 }

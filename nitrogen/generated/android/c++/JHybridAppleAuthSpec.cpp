@@ -43,7 +43,7 @@ namespace margelo::nitro::appleauth {
   }
 
   size_t JHybridAppleAuthSpec::getExternalMemorySize() noexcept {
-    static const auto method = _javaPart->getClass()->getMethod<jlong()>("getMemorySize");
+    static const auto method = javaClassStatic()->getMethod<jlong()>("getMemorySize");
     return method(_javaPart);
   }
 
@@ -52,7 +52,7 @@ namespace margelo::nitro::appleauth {
 
   // Methods
   std::shared_ptr<Promise<std::optional<AppleAuthCredential>>> JHybridAppleAuthSpec::signIn(const AppleAuthOptions& options) {
-    static const auto method = _javaPart->getClass()->getMethod<jni::local_ref<JPromise::javaobject>(jni::alias_ref<JAppleAuthOptions> /* options */)>("signIn");
+    static const auto method = javaClassStatic()->getMethod<jni::local_ref<JPromise::javaobject>(jni::alias_ref<JAppleAuthOptions> /* options */)>("signIn");
     auto __result = method(_javaPart, JAppleAuthOptions::fromCpp(options));
     return [&]() {
       auto __promise = Promise<std::optional<AppleAuthCredential>>::create();
