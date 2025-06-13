@@ -1,10 +1,10 @@
+import React, { useState } from 'react';
+import { Button, SafeAreaView, Text } from 'react-native';
 import {
-  AppleAuth,
   AppleAuthCredential,
   AppleAuthScopes,
-} from '@kazion/react-native-apple-auth';
-import React, {useState} from 'react';
-import {Button, SafeAreaView, Text} from 'react-native';
+  AppleSSO,
+} from 'react-native-nitro-apple-sso';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -15,7 +15,7 @@ const App = () => {
   const handleAppleSignin = async () => {
     setLoading(true);
     try {
-      const appleAuthCredential = await AppleAuth.signIn({
+      const appleAuthCredential = await AppleSSO.signIn({
         scopes: [AppleAuthScopes.EMAIL, AppleAuthScopes.FULL_NAME],
       });
       setCredentials(appleAuthCredential);
@@ -27,7 +27,7 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{ flex: 1 }}>
       <Text>Apple Auth With Nitro Modules</Text>
       <Text>Email: {credentials?.email ?? 'No Email'}</Text>
       <Text>Full Name: {credentials?.fullName ?? 'No Full Name'}</Text>
