@@ -1,11 +1,11 @@
-# @kazion/react-native-apple-auth
+# react-native-nitro-apple-sso
 
 A React Native module for Apple Sign In Built with Nitro Modules.
 
-[![Build Android](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/android-build.yml/badge.svg)](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/android-build.yml)
-[![Build iOS](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/ios-build.yml/badge.svg)](https://github.com/patrickkabwe/react-native-apple-auth/actions/workflows/ios-build.yml)
-[![npm version](https://img.shields.io/npm/v/@kazion/react-native-apple-auth.svg?style=flat-square)](https://www.npmjs.com/package/@kazion/react-native-apple-auth)
-[![npm downloads](https://img.shields.io/npm/dm/@kazion/react-native-apple-auth.svg?style=flat-square)](https://www.npmjs.com/package/@kazion/react-native-apple-auth)
+[![Build Android](https://github.com/patrickkabwe/react-native-nitro-apple-sso/actions/workflows/android-build.yml/badge.svg)](https://github.com/patrickkabwe/react-native-nitro-apple-sso/actions/workflows/android-build.yml)
+[![Build iOS](https://github.com/patrickkabwe/react-native-nitro-apple-sso/actions/workflows/ios-build.yml/badge.svg)](https://github.com/patrickkabwe/react-native-nitro-apple-sso/actions/workflows/ios-build.yml)
+[![npm version](https://img.shields.io/npm/v/react-native-nitro-apple-sso.svg?style=flat-square)](https://www.npmjs.com/package/react-native-nitro-apple-sso)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-nitro-apple-sso.svg?style=flat-square)](https://www.npmjs.com/package/react-native-nitro-apple-sso)
 
 ## Features
 
@@ -24,7 +24,7 @@ A React Native module for Apple Sign In Built with Nitro Modules.
 ## Installation
 
 ```bash
-bun add @kazion/react-native-apple-auth react-native-nitro-modules
+bun add react-native-nitro-apple-sso react-native-nitro-modules
 
 # Install iOS dependencies
 cd ios && pod install && cd ..
@@ -39,7 +39,7 @@ import {
     AppleAuthCredential,
     AppleAuthScopes,
     RNAppleAuth,
-} from "@kazion/react-native-apple-auth";
+} from "react-native-nitro-apple-sso";
 import { useState } from "react";
 import { Button, SafeAreaView, Text, View } from "react-native";
 

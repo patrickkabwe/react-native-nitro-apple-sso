@@ -1,5 +1,5 @@
 {
-    "name": "@kazion/react-native-apple-auth",
+    "name": "react-native-nitro-apple-sso",
     "version": "0.3.0",
     "description": "A React Native module for Apple Sign In Built with Nitro Modules.",
     "main": "./lib/commonjs/index.js",
@@ -16,6 +16,7 @@
     },
     "keywords": [
         "react-native-apple-auth",
+        "react-native-nitro-apple-sso",
         "react-native",
         "apple-auth",
         "apple-sign-in",

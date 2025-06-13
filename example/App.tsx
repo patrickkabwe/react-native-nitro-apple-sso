@@ -2,7 +2,7 @@ import {
   AppleAuth,
   AppleAuthCredential,
   AppleAuthScopes,
-} from '@kazion/react-native-apple-auth';
+} from 'react-native-nitro-apple-sso';
 import React, {useState} from 'react';
 import {Button, SafeAreaView, Text} from 'react-native';
 
