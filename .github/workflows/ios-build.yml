@@ -35,7 +35,7 @@ on:
       - '**/nitro.json'
 
 env:
-  USE_CCACHE: 1
+  USE_CCACHE: 0
 
 jobs:
   build_new:
