@@ -38,7 +38,7 @@ cd ios && pod install && cd ..
 import {
     AppleAuthCredential,
     AppleAuthScopes,
-    RNAppleAuth,
+    AppleSSO,
 } from "react-native-nitro-apple-sso";
 import { useState } from "react";
 import { Button, SafeAreaView, Text, View } from "react-native";
@@ -50,7 +50,7 @@ const App = () => {
     const handleAppleSignIn = async () => {
         setLoading(true);
         try {
-            const appleAuthCredential = await RNAppleAuth.signIn({
+            const appleAuthCredential = await AppleSSO.signIn({
                 scopes: [AppleAuthScopes.EMAIL, AppleAuthScopes.FULL_NAME],
             });
             setCreds(appleAuthCredential);
@@ -157,7 +157,7 @@ Initiates Apple Sign In flow with the specified options.
 **Example:**
 
 ```tsx
-const credential = await RNAppleAuth.signIn({
+    const credential = await AppleSSO.signIn({
     scopes: [AppleAuthScopes.EMAIL, AppleAuthScopes.FULL_NAME],
     operation: AppleAuthOperation.LOGIN,
 });
